@@ -53,14 +53,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 extension SceneDelegate {
     private func setupInitialViewController(with scene: UIWindowScene) {
         
-       // let initialController = AuthViewController()
+        let initialController = AuthViewController()
         let navigationController = UINavigationController(rootViewController: AuthViewController())
         navigationController.navigationBar.titleTextAttributes = [ NSAttributedString.Key.foregroundColor : UIColor.white ]
         navigationController.navigationBar.tintColor = .white
         navigationController.navigationBar.topItem?.title = ""
      
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = navigationController
+        window?.rootViewController = initialController
      
         window?.makeKeyAndVisible()
     }
